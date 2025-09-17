@@ -2,7 +2,7 @@ import { UserProps } from '@/interfaces';
 import UserCard from '@/components/common/UserCard';
 import Header from '@/components/layout/Header';
 
-const UsersPage = ({ posts }: { posts: UserProps[] }) => {
+const Users = ({ posts }: { posts: UserProps[] }) => {
 
   return (
     <div className="flex flex-col h-screen">
@@ -31,4 +31,4 @@ export async function getStaticProps() {
   }
 }
 
-export default UsersPage
+export default Users
