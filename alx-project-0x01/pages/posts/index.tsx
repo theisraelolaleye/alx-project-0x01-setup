@@ -14,7 +14,7 @@ const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
         </div>
         <div className="grid grid-cols-3 gap-2 ">
           {
-            posts?.map(({ title, body, userId, id }: PostProps, key: number) => (
+            posts.map(({ title, body, userId, id }: PostProps, key: number) => (
               <PostCard title={title} body={body} userId={userId} id={id} key={key} />
             ))
           }

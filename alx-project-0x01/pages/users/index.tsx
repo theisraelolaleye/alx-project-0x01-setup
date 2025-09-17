@@ -1,15 +1,20 @@
-import React from 'react'
 import { UserProps } from '@/interfaces';
 import UserCard from '@/components/common/UserCard';
+import Header from '@/components/layout/Header';
 
-const UsersPage = () => {
-  const users: UserProps[] = []; // Fetch or pass users data here
+const UsersPage = ({ users }: { users: UserProps[] }) => {
 
   return (
-    <div>
-      {users.map(user => (
-        <UserCard key={user.id} {...user} />
-      ))}
+    <div className="flex flex-col h-screen">
+      <Header />
+      <main className="p-4">
+        <h1 className="text-2xl font-semibold">Users</h1>
+        <div className="grid grid-cols-3 gap-4">
+          {users.map(user => (
+            <UserCard key={user.id} {...user} />
+          ))}
+        </div>
+      </main>
     </div>
   )
 }
