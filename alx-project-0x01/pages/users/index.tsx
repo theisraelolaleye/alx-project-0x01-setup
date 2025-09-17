@@ -2,7 +2,7 @@ import { UserProps } from '@/interfaces';
 import UserCard from '@/components/common/UserCard';
 import Header from '@/components/layout/Header';
 
-const UsersPage = ({ users }: { users: UserProps[] }) => {
+const UsersPage = ({ posts }: { posts: UserProps[] }) => {
 
   return (
     <div className="flex flex-col h-screen">
@@ -10,7 +10,7 @@ const UsersPage = ({ users }: { users: UserProps[] }) => {
       <main className="p-4">
         <h1 className="text-2xl font-semibold">Users</h1>
         <div className="grid grid-cols-3 gap-4">
-          {users.map(user => (
+          {posts.map(user => (
             <UserCard key={user.id} {...user} />
           ))}
         </div>
