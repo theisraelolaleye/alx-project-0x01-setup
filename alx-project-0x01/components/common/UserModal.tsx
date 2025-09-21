@@ -27,6 +27,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
       bs: ''
     }
   });
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
@@ -40,6 +41,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
       setUser(prev => ({ ...prev, [name]: value }));
     }
   }
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const userWithId: UserProps = {
